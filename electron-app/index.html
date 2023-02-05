@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Electron App</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+  <header></header>
+
+  <p class="intro">This Electron app uses a native module to create a countdown timer.</p>
+
+  <div class="number">
+    <div class="countdown">
+      <div class="figure">
+        <span id="mins"></span>
+      </div>
+      :
+      <div class="figure">
+        <span id="secs"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+  </div>
+  <div class="row">
+    <button id="add5">+5 sec</button>
+    <button id="sub5">-5 sec</button>
+  </div>
+
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
