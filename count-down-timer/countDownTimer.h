@@ -24,11 +24,11 @@ private:
   void calculate(const Napi::CallbackInfo &info);
   Napi::Value isStarted(const Napi::CallbackInfo &info);
   bool started;
+  std::thread currThread;
 
 protected:
   int32_t minutes, seconds;
   int32_t remainingMins, remainingSecs;
-  std::thread currThread;
 };
 
 #endif
