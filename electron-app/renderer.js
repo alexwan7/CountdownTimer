@@ -30,6 +30,7 @@ const $stopBtn = document.querySelector("#stop");
 const $resetBtn = document.querySelector("#reset");
 const $add5Btn = document.querySelector("#add5");
 const $sub5Btn = document.querySelector("#sub5");
+let interval;
 
 $startBtn.addEventListener("click", () => {
   timer.start(() => {
@@ -37,18 +38,22 @@ $startBtn.addEventListener("click", () => {
   });
   const started = timer.isStarted();
   updateStartBtn(started);
-  setInterval(updateVal(),1000);
+  if(!interval){
+    setInterval(updateVal, 1000);
+  }
 });
 
 $stopBtn.addEventListener("click", () => {
   timer.stop();
   const started = timer.isStarted();
   updateStartBtn(started);
+  interval = undefined;
 });
 
 $resetBtn.addEventListener("click", () => {
   timer.reset();
   updateVal();
+  interval = undefined;
 });
 
 $add5Btn.addEventListener("click", () => {
