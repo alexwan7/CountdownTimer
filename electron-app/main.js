@@ -28,7 +28,7 @@ function createWindow() {
       // preload: path.join(__dirname, 'preload.js'),
     },
   });
-  mainWindow.webContents.openDevTools(true);
+  // mainWindow.webContents.openDevTools(true);
 
   // and load the index.html of the app.
   mainWindow.loadURL(

@@ -33,14 +33,15 @@ const $sub5Btn = document.querySelector("#sub5");
 let interval;
 
 $startBtn.addEventListener("click", () => {
+  if(!interval){
+    setInterval(updateVal, 1000);
+  }
   timer.start(() => {
     console.log("test start timer", timer, getMins(), timer.getSecs());
   });
   const started = timer.isStarted();
   updateStartBtn(started);
-  if(!interval){
-    setInterval(updateVal, 1000);
-  }
+
 });
 
 $stopBtn.addEventListener("click", () => {
