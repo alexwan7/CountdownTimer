@@ -32,12 +32,12 @@ const $add5Btn = document.querySelector("#add5");
 const $sub5Btn = document.querySelector("#sub5");
 
 $startBtn.addEventListener("click", () => {
-  timer.start(timer.start(function () {
+  timer.start(() => {
     console.log("test start timer", timer, getMins(), timer.getSecs());
-  }));
+  });
   const started = timer.isStarted();
   updateStartBtn(started);
-  updateVal();
+  setInterval(updateVal(),1000);
 });
 
 $stopBtn.addEventListener("click", () => {
