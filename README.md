@@ -5,8 +5,8 @@
 </center>
 
 ## Overview
-The idea came across my mind because I have been asked to implement a countdown timer in Fortinet's OA session.\
+The idea came across my mind because I have been asked to implement a countdown timer in my last Fortinet's OA session.\
 This plugin is written in NAPI
 
 ## Pre-requisites
-Electron@22.0.0 + node-gyp@9.3.1 + node-appon-api@5.1.0\
+Electron@22.0.0 + node-gyp@9.3.1 + node-appon-api@5.1.0
